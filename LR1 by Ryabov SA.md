@@ -24,23 +24,27 @@
 using namespace std;
 
 int main(){ 
-double xfirst, xlast; 
+
+double xfirst, xlast;        //объявление переменных-границ и переменной-количества строк
 int n;
-cout << "Please, enter the left border (more than -1):";
+
+cout << "Please, enter the left border (more than -1):";         //ввод пользователем данных в программу
 cin >> xfirst;
 cout << "...and the right one (less than 1):";
 cin  >> xlast;
 cout << "Number of strings:";
 cin  >> n;
-if (xfirst<(-1) || xlast > (1))
+
+if (xfirst<(-1) || xlast > (1))              //реализация простого предотвращения ошибки ввода
 cout << "Your input is incorrect!";
+
 else {
-    cout << "-----------------------------\n"
+    cout << "-----------------------------\n"          //вывод "шапки" таблицы
     << "|    x    |    arcsin(x)    |\n"
     << "-----------------------------\n";
-    double d;
+    double d;                                          //объявление переменной-шага и вычисление её значения
     d = (xlast - xfirst)/(n-1);
-    for (float x = xfirst; x < xlast; x += d)
+    for (float x = xfirst; x < xlast; x += d)               //вывод итоговой таблицы
         {
         cout << '|' << setw(9) << setprecision(4)
         << x << '|' << setw(9) << asin(x) <<" radians|\n";
