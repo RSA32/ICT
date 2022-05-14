@@ -98,15 +98,15 @@ int main()
     cout << "Size of the  matrix-result " << A << "x" << C;
     cout << endl;
 
-    int** ARR1 = new int* [A];       //объявления массива 1
+    int** ARR1 = new int* [A];       //объявление массива 1
     for (int i = 0; i < A; i++)
         ARR1[i] = new int[B];
 
-    int** ARR2 = new int* [B];       //объявления массива 2       
+    int** ARR2 = new int* [B];       //объявление массива 2       
     for (int i = 0; i < B; i++)
         ARR2[i] = new int[C];
 
-    int** ARR3 = new int* [A];       //объявления массива-результата       
+    int** ARR3 = new int* [A];       //объявление массива-результата       
     for (int i = 0; i < A; i++)
         ARR3[i] = new int[C];
 
